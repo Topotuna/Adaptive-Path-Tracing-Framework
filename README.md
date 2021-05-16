@@ -17,6 +17,16 @@ The core script `render.m` takes input parameters from `parameters.m`, then read
 The project uses functionality of MATLAB® Image Processing Toolbox.
 It also takes [OpenEXR](https://github.com/skycaptain/openexr-matlab) as an external library to enable writing images in HDR compatible format.
 
+## Data File Format
+
+The sample data file contains a list of samples.
+Each sample is represented by a tuple of values in binary
+
+`(pixel_X, pixel_Y, offset_X, offset_Y, colour_X, colour_Y, colour_Z, alpha)`
+
+Renderer ["Mitsuba 2"](https://mitsuba2.readthedocs.io) was altered to enable printing out the sample values.
+Please refer to project ["Path Sample Extraction"](https://github.com/Topotuna/Path-Sample-Extraction) for generating the sample data files.
+
 ## Usage
 
 The code is invoked by calling the `render.m` script from project's root directory:
